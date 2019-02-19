@@ -19,12 +19,12 @@ with open(txt_file, "r") as in_text:
         out_writer = csv.writer(out_csv)
         for row in in_reader:
             flag += 1
-            if (flag>=1000&flag<=2000) :
+            if (flag>=20000&flag<=50000) :
                 csv_record_counter += 1
                 flag += 1
                 out_writer.writerow(row)
                 print ("flag")
                 print (flag)
-            if (flag>3000) : break
+            if (flag>60000) : break
             #else : continue
                 
