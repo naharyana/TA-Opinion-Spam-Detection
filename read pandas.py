@@ -4,8 +4,10 @@ Created on Tue Feb 26 09:42:30 2019
 
 @author: Ana Alimatus Zaqiyah
 """
-
+import time as time
 import pandas as pd
+
+start = time.time
 
 #KETERANGAN DATAFRAME :
 
@@ -21,7 +23,8 @@ import pandas as pd
 
 df = pd.read_csv('productInfoXML-reviewed-mProductssv.csv', sep=',', encoding='latin-1')
 
-df1 = pd.read_csv('labeledSpam.csv', sep=',', encoding='latin-1')
+#df1 = pd.read_csv('labeledSpam.csv', sep=',', encoding='latin-1')
+#df1 = pd.read_csv('notSpam.csv', sep='delimeter', encoding='latin-1')
 df2 = pd.DataFrame()
 jumlah_data = len(df)
 
@@ -97,3 +100,8 @@ for column in df5:
 #df7.to_excel("df5.xlsx")
 
 #jump to df5 read
+            
+
+end = time.time
+
+print(end-start)        
